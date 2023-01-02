@@ -1,0 +1,39 @@
+/* My store specializes in selling bikes. Here is a table for all the items in my store, with at least 5 columns for the data we would need to store */
+
+CREATE TABLE bikes (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  price NUMERIC,
+  type TEXT,
+  color TEXT
+);
+
+/* Then I insert some data into this table to represent the bikes we have in our store */
+
+INSERT INTO bikes (id, name, price, type, color)
+VALUES
+  (1, 'Mountain Bike', 499.99, 'Mountain', 'Green'),
+  (2, 'Road Bike', 799.99, 'Road', 'Red'),
+  (3, 'Hybrid Bike', 599.99, 'Hybrid', 'Blue'),
+  (4, 'Beach Cruiser', 299.99, 'Cruiser', 'Yellow'),
+  (5, 'Kids Bike', 199.99, 'Kids', 'Pink'),
+  (6, 'Tandem Bike', 999.99, 'Tandem', 'Purple'),
+  (7, 'Electric Bike', 1299.99, 'Electric', 'Black'),
+  (8, 'City Bike', 499.99, 'City', 'Gray'),
+  (9, 'Folding Bike', 699.99, 'Folding', 'White'),
+  (10, 'BMX Bike', 399.99, 'BMX', 'Orange'),
+  (11, 'Touring Bike', 899.99, 'Touring', 'Turquoise'),
+  (12, 'Fixie Bike', 499.99, 'Fixie', 'Lime'),
+  (13, 'Recumbent Bike', 799.99, 'Recumbent', 'Mint'),
+  (14, 'Triathlon Bike', 1499.99, 'Triathlon', 'Navy'),
+  (15, 'Time Trial Bike', 999.99, 'Time Trial', 'Maroon')
+
+/* Now that I have some data in my table. I can use SELECT statements to order bikes by price and show some statistics about them.
+To order the bikes by price, I use the following SELECT statement */
+
+SELECT * FROM bikes ORDER BY price ASC;
+
+/* This will show all the bikes in our store, sorted from lowest to highest price.
+To show a statistic about the bikes in our store, we can use the AVG() function to calculate the average price of all the bikes */
+
+SELECT AVG(price) as average_price FROM bikes;
