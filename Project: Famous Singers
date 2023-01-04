@@ -33,12 +33,36 @@ INSERT INTO Singer (name, country_id) VALUES ('Carlos Salazar', 3);
 INSERT INTO Singer (name, country_id) VALUES ('Kali Uchis', 4);
 INSERT INTO Singer (name, country_id) VALUES ('Rihanna', 1);
 
+INSERT INTO Singer (name, country_id) VALUES ('Carin Leon', 3);
+INSERT INTO Singer (name, country_id) VALUES ('Tupac Amaru Shakur', 1);
+INSERT INTO Singer (name, country_id) VALUES ('Jim Morrison.', 1);
+INSERT INTO Singer (name, country_id) VALUES ('León Larregui', 3);
+INSERT INTO Singer (name, country_id) VALUES ('Bad Bunny', 2);
+
+INSERT INTO Singer (name, country_id) VALUES ('Selena', 1);
+INSERT INTO Singer (name, country_id) VALUES ('Denise Gutiérrez', 1);
+INSERT INTO Singer (name, country_id) VALUES ('James Hetfield', 1);
+INSERT INTO Singer (name, country_id) VALUES ('J Balvin', 4);
+INSERT INTO Singer (name, country_id) VALUES ('Albert Greene', 1);
+
 -- Song table
 INSERT INTO Song (title, singer_id) VALUES ('Lo Que Siento', 1);
 INSERT INTO Song (title, singer_id) VALUES ('I Dont Know You', 2);
 INSERT INTO Song (title, singer_id) VALUES ('Flor De Capomo', 3);
 INSERT INTO Song (title, singer_id) VALUES ('Loner', 4);
 INSERT INTO Song (title, singer_id) VALUES ('Pour It Up', 5);
+
+INSERT INTO Song (title, singer_id) VALUES ('Tu', 6);
+INSERT INTO Song (title, singer_id) VALUES ('Never had a friend like me', 7);
+INSERT INTO Song (title, singer_id) VALUES ('L.A. Woman', 8);
+INSERT INTO Song (title, singer_id) VALUES ('Labios Rotos', 9);
+INSERT INTO Song (title, singer_id) VALUES ('Neverita', 10);
+
+INSERT INTO Song (title, singer_id) VALUES ('Como La Flor', 11);
+INSERT INTO Song (title, singer_id) VALUES ('Bestia', 12);
+INSERT INTO Song (title, singer_id) VALUES ('Master Of Puppets', 13);
+INSERT INTO Song (title, singer_id) VALUES ('Bonita', 14);
+INSERT INTO Song (title, singer_id) VALUES ('Lets Stay Together', 15);
 
 
 -- This is a relational query to find the songs written by each singer and the country they are from
