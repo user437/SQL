@@ -1,0 +1,49 @@
+-- Country table
+CREATE TABLE Country (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+-- Singer table
+CREATE TABLE Singer (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  country_id INTEGER NOT NULL,
+  FOREIGN KEY (country_id) REFERENCES Country(id)
+);
+
+-- Song table
+CREATE TABLE Song (
+  id INTEGER PRIMARY KEY,
+  title TEXT NOT NULL,
+  singer_id INTEGER NOT NULL,
+  FOREIGN KEY (singer_id) REFERENCES Singer(id)
+);
+
+-- Country table
+INSERT INTO Country (name) VALUES ('United States');
+INSERT INTO Country (name) VALUES ('Puerto Rico');
+INSERT INTO Country (name) VALUES ('Mexico');
+INSERT INTO Country (name) VALUES ('Colombia');
+
+-- Singer table
+INSERT INTO Singer (name, country_id) VALUES ('Omar Banos', 1);
+INSERT INTO Singer (name, country_id) VALUES ('María Zardoya', 2);
+INSERT INTO Singer (name, country_id) VALUES ('Carlos Salazar', 3);
+INSERT INTO Singer (name, country_id) VALUES ('Kali Uchis', 4);
+INSERT INTO Singer (name, country_id) VALUES ('Rihanna', 1);
+
+-- Song table
+INSERT INTO Song (title, singer_id) VALUES ('Lo Que Siento', 1);
+INSERT INTO Song (title, singer_id) VALUES ('I Dont Know You', 2);
+INSERT INTO Song (title, singer_id) VALUES ('Flor De Capomo', 3);
+INSERT INTO Song (title, singer_id) VALUES ('Loner', 4);
+INSERT INTO Song (title, singer_id) VALUES ('Pour It Up', 5);
+
+
+-- This is a relational query to find the songs written by each singer and the country they are from
+SELECT s.name AS singer_name, c.name AS country_name, s.id AS singer_id, group_concat(song.title) AS song_titles
+FROM Singer s
+JOIN Country c ON s.country_id = c.id
+JOIN Song song ON s.id = song.singer_id
+GROUP BY s.id;
